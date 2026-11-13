@@ -1,0 +1,332 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clock · Relógios que você monta com os olhos</title>
+  <meta name="description" content="Clock, vitrine de relógios. Role a página e veja o Casio Edifice Preto ser montado peça por peça, depois conheça a vitrine e fale com a loja.">
+  <meta name="theme-color" content="#0b0a09">
+  <!-- DEPLOY STEP: trocar pelas URLs absolutas do site no ar -->
+  <meta property="og:title" content="Clock · Vitrine de relógios">
+  <meta property="og:description" content="Veja o Casio Edifice Preto ser montado peça por peça.">
+  <meta property="og:image" content="assets/hero.jpg">
+  <meta property="og:url" content="">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0a09'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%23d39a78' stroke-width='2'/%3E%3Cpath d='M16 9v7l5 3' fill='none' stroke='%23d39a78' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Manrope:wght@400;600&family=Unbounded:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
+  <div class="env" aria-hidden="true"></div>
+
+  <nav class="nav" aria-label="Principal">
+    <a class="nav__brand" href="#montagem" aria-label="Clock, início">CLOCK</a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu"><span></span><span></span></button>
+    <div class="nav__links" id="nav-links">
+      <a href="#vitrine">Vitrine</a>
+      <a href="#edifice">Edifice Preto</a>
+      <a href="#por-dentro">Por dentro</a>
+      <a href="#loja">A loja</a>
+      <a href="#contato">Contato</a>
+    </div>
+    <a class="btn btn--ghost nav__cta" data-wa="Olá, Clock! Vi o site e quero saber mais sobre os relógios." href="#contato">WhatsApp</a>
+  </nav>
+
+  <main id="main" tabindex="-1">
+
+    <!-- Montagem 3D guiada pelo scroll -->
+    <section class="hero boot" id="montagem" aria-label="Montagem do relógio, peça por peça">
+      <div class="stage">
+        <div class="poster" aria-hidden="true"></div>
+        <canvas id="watch" aria-hidden="true"></canvas>
+        <div class="stage__scrim" aria-hidden="true"></div>
+
+        <div class="bands">
+          <div class="band band--intro" data-a="0" data-b="0.065">
+            <p class="kicker">Casio Edifice · Preto</p>
+            <h1>Cada peça no seu lugar.</h1>
+            <p class="lede">Role a página e monte o relógio, peça por peça.</p>
+          </div>
+          <div class="band" data-a="0.08" data-b="0.2">
+            <p class="kicker"><b>01</b> Caixa</p>
+            <h2>Carbono forjado, leve e firme.</h2>
+            <p class="lede">A caixa protege tudo o que vem depois. É aqui que a montagem começa.</p>
+          </div>
+          <div class="band" data-a="0.215" data-b="0.33">
+            <p class="kicker"><b>02</b> Mecanismo</p>
+            <h2>O coração automático.</h2>
+            <p class="lede">Sem bateria. Ele ganha corda com o movimento do seu pulso.</p>
+          </div>
+          <div class="band" data-a="0.345" data-b="0.525">
+            <p class="kicker"><b>03</b> Engrenagens</p>
+            <h2>Dentes que contam o tempo.</h2>
+            <p class="lede">Cada roda gira no ritmo exato da outra. É assim que um segundo vira uma hora.</p>
+          </div>
+          <div class="band" data-a="0.54" data-b="0.665">
+            <p class="kicker"><b>04</b> Mostrador</p>
+            <h2>Nenhum igual ao outro.</h2>
+            <p class="lede">O desenho do carbono nunca se repete. O seu mostrador é só seu.</p>
+          </div>
+          <div class="band" data-a="0.68" data-b="0.765">
+            <p class="kicker"><b>05</b> Ponteiros</p>
+            <h2>Ouro rosé sobre preto.</h2>
+            <p class="lede">Fáceis de ler num relance, de dia ou de noite.</p>
+          </div>
+          <div class="band" data-a="0.775" data-b="0.86">
+            <p class="kicker"><b>06</b> Vidro de safira</p>
+            <h2>Feito para não riscar.</h2>
+            <p class="lede">A safira fecha o conjunto e deixa a luz entrar.</p>
+          </div>
+          <div class="band" data-a="0.87" data-b="0.945">
+            <p class="kicker"><b>07</b> Pulseira</p>
+            <h2>Pronto para o pulso.</h2>
+            <p class="lede">Macia, firme e feita para o uso de todo dia.</p>
+          </div>
+          <div class="band band--settle" data-a="0.958" data-b="1">
+            <p class="kicker">Montagem completa</p>
+            <h2>Edifice Preto. Agora veja de perto.</h2>
+            <p class="lede">Ele está na vitrine da Clock, esperando o seu pulso.</p>
+            <div class="band__cta">
+              <a class="btn" data-wa="Olá, Clock! Quero saber mais sobre o Casio Edifice Preto." href="#contato">Falar no WhatsApp</a>
+              <a class="btn btn--ghost" href="#vitrine">Ver a vitrine</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="rail" aria-hidden="true">
+          <div class="rail__line"><div class="rail__fill"></div></div>
+          <ol>
+            <li><b>01</b><span>Caixa</span></li>
+            <li><b>02</b><span>Mecanismo</span></li>
+            <li><b>03</b><span>Engrenagens</span></li>
+            <li><b>04</b><span>Mostrador</span></li>
+            <li><b>05</b><span>Ponteiros</span></li>
+            <li><b>06</b><span>Safira</span></li>
+            <li><b>07</b><span>Pulseira</span></li>
+          </ol>
+        </div>
+        <p class="cue" aria-hidden="true"><span></span>Role para montar</p>
+      </div>
+    </section>
+
+    <!-- Vitrine -->
+    <section class="sec vitrine" id="vitrine">
+      <header class="sec__head reveal">
+        <p class="kicker">A vitrine</p>
+        <h2>Escolha o seu.</h2>
+        <p class="lede">Uma seleção curta, olhada peça por peça. Gostou de algum? A gente mostra de perto.</p>
+      </header>
+      <div class="grid">
+        <article class="card card--feature reveal">
+          <div class="card__img"><img src="assets/stone.jpg" alt="Casio Edifice Preto deitado sobre pedra preta, com índices em ouro rosé" loading="lazy" width="1400" height="1750"></div>
+          <div class="card__body">
+            <p class="tag">Em destaque</p>
+            <h3>Casio Edifice Preto</h3>
+            <p>Automático, mostrador em carbono forjado e detalhes em ouro rosé.</p>
+            <div class="card__foot">
+              <span class="price">Preço sob consulta</span>
+              <a class="btn" href="#contato" data-produto="Casio Edifice Preto">Tenho interesse</a>
+            </div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card__img"><img src="assets/p-azul.jpg" alt="Relógio automático de aço com mostrador azul" loading="lazy" width="900" height="1125"></div>
+          <div class="card__body">
+            <p class="tag">Automático</p>
+            <h3>Aço Azul</h3>
+            <p>Mostrador azul profundo e pulseira de aço.</p>
+            <div class="card__foot">
+              <span class="price">Sob consulta</span>
+              <a class="link" href="#contato" data-produto="Aço Azul">Tenho interesse</a>
+            </div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card__img"><img src="assets/p-rose.jpg" alt="Relógio social fino em ouro rosé com pulseira de couro" loading="lazy" width="900" height="1125"></div>
+          <div class="card__body">
+            <p class="tag">Social</p>
+            <h3>Rosé Clássico</h3>
+            <p>Fino, discreto, com pulseira de couro.</p>
+            <div class="card__foot">
+              <span class="price">Sob consulta</span>
+              <a class="link" href="#contato" data-produto="Rosé Clássico">Tenho interesse</a>
+            </div>
+          </div>
+        </article>
+        <article class="card reveal">
+          <div class="card__img"><img src="assets/p-crono.jpg" alt="Cronógrafo esportivo de aço com mostrador preto" loading="lazy" width="900" height="1125"></div>
+          <div class="card__body">
+            <p class="tag">Cronógrafo</p>
+            <h3>Crono Sport</h3>
+            <p>Três contadores e pulseira de borracha.</p>
+            <div class="card__foot">
+              <span class="price">Sob consulta</span>
+              <a class="link" href="#contato" data-produto="Crono Sport">Tenho interesse</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Edifice Preto em detalhe -->
+    <section class="sec detail" id="edifice">
+      <div class="detail__img reveal">
+        <img src="assets/hero.jpg" alt="Casio Edifice Preto em três quartos, com luz de bronze ao fundo" loading="lazy" width="1920" height="1080">
+      </div>
+      <div class="detail__text reveal">
+        <p class="kicker">Edifice Preto</p>
+        <h2>Preto por fora. Vivo por dentro.</h2>
+        <dl class="specs">
+          <div><dt>Movimento</dt><dd>Automático, sem bateria</dd></div>
+          <div><dt>Mostrador</dt><dd>Carbono forjado, padrão único</dd></div>
+          <div><dt>Índices e ponteiros</dt><dd>Tom ouro rosé</dd></div>
+          <div><dt>Vidro</dt><dd>Safira</dd></div>
+          <div><dt>Data</dt><dd>Janela às 3 horas</dd></div>
+          <div><dt>Pulseira</dt><dd>Preta, macia ao toque</dd></div>
+        </dl>
+        <a class="btn" href="#contato" data-produto="Casio Edifice Preto">Quero ver este relógio</a>
+      </div>
+    </section>
+
+    <!-- Por dentro: filme do mecanismo -->
+    <section class="film" id="por-dentro">
+      <video class="film__video" muted loop playsinline preload="none" poster="assets/movement.jpg" data-src="assets/movement.mp4" aria-hidden="true" tabindex="-1"></video>
+      <div class="film__scrim" aria-hidden="true"></div>
+      <div class="film__text reveal">
+        <p class="kicker">Por dentro</p>
+        <h2>Ninguém vê. Tudo depende disso.</h2>
+        <p class="lede">Um relógio automático tem mais de cem peças trabalhando juntas, em silêncio, o dia inteiro.</p>
+      </div>
+    </section>
+
+    <!-- Momento interativo: dar corda -->
+    <section class="sec wind" id="corda">
+      <div class="wind__stage reveal">
+        <p class="kicker">Experimente</p>
+        <h2>Dê corda.</h2>
+        <p class="lede">Segure o botão, como quem gira a coroa, e veja o que a Clock garante em cada relógio.</p>
+        <button class="wind__btn" type="button" aria-pressed="false" aria-describedby="wind-hint">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="wind__track" cx="60" cy="60" r="48"/>
+            <circle class="wind__arc" cx="60" cy="60" r="48"/>
+            <g class="wind__gear">
+              <path d="M60 30l4 7 8-2 1 8 8 1-2 8 7 4-5 6 5 6-7 4 2 8-8 1-1 8-8-2-4 7-4-7-8 2-1-8-8-1 2-8-7-4 5-6-5-6 7-4-2-8 8-1 1-8 8 2z"/>
+              <circle cx="60" cy="62" r="9"/>
+            </g>
+          </svg>
+          <span class="wind__label">Segure</span>
+        </button>
+        <p class="wind__hint" id="wind-hint">Segure com o dedo, o mouse ou a barra de espaço.</p>
+      </div>
+      <ol class="wind__cards">
+        <li><b>01</b><h3>Relógio original</h3><p>Cada peça da vitrine é original e sai da loja com a documentação.</p></li>
+        <li><b>02</b><h3>Garantia de verdade</h3><p>Você leva a garantia por escrito e sabe com quem falar se precisar.</p></li>
+        <li><b>03</b><h3>Ajuste no seu pulso</h3><p>A pulseira sai da loja na medida certa, sem custo.</p></li>
+      </ol>
+    </section>
+
+    <!-- A loja -->
+    <section class="sec loja" id="loja">
+      <div class="loja__img reveal">
+        <img src="assets/boutique.jpg" alt="Interior da loja com balcão de vidro iluminado e relógios expostos" loading="lazy" width="1920" height="1080">
+      </div>
+      <div class="loja__text">
+        <header class="reveal">
+          <p class="kicker">A loja</p>
+          <h2>Venha ver de perto.</h2>
+          <p class="lede">Foto ajuda. No pulso é outra coisa.</p>
+        </header>
+        <ol class="steps reveal">
+          <li><b>1</b><div><h3>Marque um horário</h3><p>Pelo WhatsApp ou pelo formulário, em um minuto.</p></div></li>
+          <li><b>2</b><div><h3>Prove com calma</h3><p>Separamos os relógios que você quer ver. Sem pressa.</p></div></li>
+          <li><b>3</b><div><h3>Saia com ele ajustado</h3><p>Medida certa, garantia em mãos, pronto para usar.</p></div></li>
+        </ol>
+        <a class="btn btn--ghost reveal" href="#contato">Agendar visita</a>
+      </div>
+    </section>
+
+    <!-- Perguntas -->
+    <section class="sec faq" id="perguntas">
+      <header class="sec__head reveal">
+        <p class="kicker">Perguntas</p>
+        <h2>O que todo mundo pergunta.</h2>
+      </header>
+      <div class="faq__list reveal">
+        <details>
+          <summary>Os relógios são originais?</summary>
+          <p>Sim. Tudo o que está na vitrine é original e acompanha a documentação da peça.</p>
+        </details>
+        <details>
+          <summary>Relógio automático precisa de bateria?</summary>
+          <p>Não. Ele ganha corda com o movimento do pulso. Se ficar parado alguns dias, basta usar de novo e acertar a hora.</p>
+        </details>
+        <details>
+          <summary>Posso ver o relógio antes de decidir?</summary>
+          <p>Pode e deve. Agende uma visita e prove no pulso, com calma.</p>
+        </details>
+        <details>
+          <summary>Como fico sabendo o preço?</summary>
+          <p>Chame no WhatsApp ou envie o formulário. A resposta vem com preço e formas de pagamento.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section class="sec contato" id="contato">
+      <div class="contato__text reveal">
+        <p class="kicker">Contato</p>
+        <h2>Fale com a Clock.</h2>
+        <p class="lede">Conte qual relógio chamou a sua atenção, tire uma dúvida ou marque a sua visita.</p>
+        <a class="btn" data-wa="Olá, Clock! Vi o site e quero falar com vocês." href="#contato">Chamar no WhatsApp</a>
+        <p class="note">O formulário ao lado abre o seu WhatsApp com a mensagem pronta. É só enviar.</p>
+      </div>
+      <form class="form reveal" novalidate>
+        <div class="form__fields">
+          <div class="form__row">
+            <label for="f-nome">Seu nome</label>
+            <input id="f-nome" name="nome" type="text" autocomplete="name" required placeholder="Como podemos chamar você?">
+          </div>
+          <div class="form__row">
+            <label for="f-motivo">O que você procura?</label>
+            <select id="f-motivo" name="motivo">
+              <option value="interesse">Tenho interesse em um relógio</option>
+              <option value="visita">Quero agendar uma visita</option>
+              <option value="duvida">Tenho uma dúvida</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <label for="f-produto">Relógio</label>
+            <input id="f-produto" name="produto" type="text" placeholder="Ex.: Casio Edifice Preto">
+          </div>
+          <div class="form__row form__row--data">
+            <label for="f-data">Dia de preferência</label>
+            <input id="f-data" name="data" type="date">
+          </div>
+          <div class="form__row">
+            <label for="f-msg">Mensagem</label>
+            <textarea id="f-msg" name="mensagem" rows="3" placeholder="Opcional"></textarea>
+          </div>
+          <button class="btn" type="submit">Enviar pelo WhatsApp</button>
+        </div>
+        <div class="form__done" tabindex="-1" role="status">
+          <h3>Mensagem pronta.</h3>
+          <p>Abrimos o WhatsApp com tudo escrito. Toque em enviar por lá e a loja responde.</p>
+          <button class="link form__again" type="button">Escrever outra</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__brand">CLOCK</p>
+    <p>Vitrine de relógios. Atendimento pelo WhatsApp e com hora marcada.</p>
+    <p class="footer__fine">Casio e Edifice são marcas registradas da Casio Computer Co., Ltd. As imagens deste site são ilustrativas e foram criadas com inteligência artificial.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
