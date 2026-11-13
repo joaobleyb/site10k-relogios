@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A loja · Clock</title>
+  <meta name="description" content="Visite a Clock com hora marcada: prove o relógio com calma e saia com ele ajustado no pulso.">
+  <meta name="theme-color" content="#0b0a09">
+  <!-- DEPLOY STEP: trocar pelas URLs absolutas do site no ar -->
+  <meta property="og:title" content="A loja · Clock">
+  <meta property="og:image" content="assets/boutique.jpg">
+  <meta property="og:url" content="">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0a09'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%23d39a78' stroke-width='2'/%3E%3Cpath d='M16 9v7l5 3' fill='none' stroke='%23d39a78' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Manrope:wght@400;600&family=Unbounded:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
+  <div class="env" aria-hidden="true"></div>
+
+  <nav class="nav" aria-label="Principal">
+    <a class="nav__brand" href="index.html" aria-label="Clock, início">CLOCK</a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu"><span></span><span></span></button>
+    <div class="nav__links" id="nav-links">
+      <a href="vitrine.html">Vitrine</a>
+      <a href="edifice-preto.html">Edifice Preto</a>
+      <a href="por-dentro.html">Por dentro</a>
+      <a href="loja.html" aria-current="page">A loja</a>
+      <a href="index.html#contato">Contato</a>
+    </div>
+    <a class="btn btn--ghost nav__cta" data-wa="Olá, Clock! Quero agendar uma visita à loja." href="index.html?motivo=visita#contato"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 1 3.3 6.5L4 19.5l1.1-3.6A8 8 0 0 1 4 12Z"/></svg>WhatsApp</a>
+  </nav>
+
+  <main id="main" tabindex="-1">
+    <header class="page-head page-head--loja">
+      <div class="page-head__bg" aria-hidden="true"></div>
+      <div class="page-head__text reveal">
+        <p class="crumbs"><a href="index.html">Início</a><span aria-hidden="true">/</span>A loja</p>
+        <p class="kicker">A loja</p>
+        <h1>Venha ver de perto.</h1>
+        <p class="lede">Foto ajuda. No pulso é outra coisa.</p>
+        <a class="btn" href="index.html?motivo=visita#contato">Agendar visita</a>
+      </div>
+    </header>
+
+    <section class="sec visit">
+      <header class="sec__head reveal">
+        <p class="kicker">A visita</p>
+        <h2>Três passos, sem pressa.</h2>
+        <p class="lede">Atendimento com hora marcada, para você provar com calma o relógio que escolheu.</p>
+      </header>
+      <div class="visit__steps reveal">
+        <ol class="steps">
+          <li><b>1</b><div><h3>Marque um horário</h3><p>Pelo WhatsApp ou pelo formulário, em um minuto.</p></div></li>
+          <li><b>2</b><div><h3>Prove com calma</h3><p>Separamos os relógios que você quer ver. Sem pressa.</p></div></li>
+          <li><b>3</b><div><h3>Saia com ele ajustado</h3><p>Medida certa, garantia em mãos, pronto para usar.</p></div></li>
+        </ol>
+        <a class="btn btn--ghost" data-wa="Olá, Clock! Quero agendar uma visita à loja." href="index.html?motivo=visita#contato">Agendar pelo WhatsApp</a>
+      </div>
+    </section>
+
+    <!-- Momento interativo: dar corda -->
+    <section class="sec wind" id="corda">
+      <div class="wind__stage reveal">
+        <p class="kicker">Experimente</p>
+        <h2>Dê corda.</h2>
+        <p class="lede">Segure o botão, como quem gira a coroa, e veja o que a Clock garante em cada relógio.</p>
+        <button class="wind__btn" type="button" aria-pressed="false" aria-describedby="wind-hint">
+          <svg viewBox="0 0 120 120" aria-hidden="true">
+            <circle class="wind__track" cx="60" cy="60" r="48"/>
+            <circle class="wind__arc" cx="60" cy="60" r="48"/>
+            <g class="wind__gear">
+              <path d="M60 30l4 7 8-2 1 8 8 1-2 8 7 4-5 6 5 6-7 4 2 8-8 1-1 8-8-2-4 7-4-7-8 2-1-8-8-1 2-8-7-4 5-6-5-6 7-4-2-8 8-1 1-8 8 2z"/>
+              <circle cx="60" cy="62" r="9"/>
+            </g>
+          </svg>
+          <span class="wind__label">Segure</span>
+        </button>
+        <p class="wind__hint" id="wind-hint">Segure com o dedo, o mouse ou a barra de espaço.</p>
+      </div>
+      <ol class="wind__cards">
+        <li><b>01</b><h3>Relógio original</h3><p>Cada peça da vitrine é original e sai da loja com a documentação.</p></li>
+        <li><b>02</b><h3>Garantia de verdade</h3><p>Você leva a garantia por escrito e sabe com quem falar se precisar.</p></li>
+        <li><b>03</b><h3>Ajuste no seu pulso</h3><p>A pulseira sai da loja na medida certa, sem custo.</p></li>
+      </ol>
+    </section>
+
+    <section class="sec cta-band reveal">
+      <p class="kicker">Antes de vir</p>
+      <h2>Escolha pela vitrine.</h2>
+      <p class="lede">Diga quais relógios quer ver e eles estarão separados quando você chegar.</p>
+      <div class="cta-band__row">
+        <a class="btn" href="vitrine.html">Ver a vitrine</a>
+        <a class="btn btn--ghost" href="index.html?motivo=visita#contato">Agendar visita</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <p class="footer__brand">CLOCK</p>
+      <nav class="footer__nav" aria-label="Rodapé">
+        <a href="vitrine.html">Vitrine</a>
+        <a href="edifice-preto.html">Edifice Preto</a>
+        <a href="por-dentro.html">Por dentro</a>
+        <a href="loja.html">A loja</a>
+        <a href="index.html#contato">Contato</a>
+      </nav>
+    </div>
+    <p>Vitrine de relógios. Atendimento pelo WhatsApp e com hora marcada.</p>
+    <p class="footer__fine">Casio e Edifice são marcas registradas da Casio Computer Co., Ltd. As imagens deste site são ilustrativas e foram criadas com inteligência artificial.</p>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>

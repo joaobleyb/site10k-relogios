@@ -2,12 +2,19 @@
 
 Site vitrine da loja Clock. A página inicial monta um **Casio Edifice Preto** em 3D, peça por peça, conforme o visitante rola a página. Ao rolar para cima, a montagem volta.
 
-## O que tem no site
+## Páginas
 
-- **Montagem 3D guiada pelo scroll**: caixa, mecanismo, engrenagens, mostrador, ponteiros, vidro de safira e pulseira. São 19 peças modeladas em código, que começam flutuando em pilha sobre a caixa e descem para o lugar.
-- **Vitrine de produtos**: o Edifice Preto em destaque e mais três cartões.
-- **Ficha do Edifice Preto**, filme do mecanismo, seção interativa "Dê corda", a loja e perguntas frequentes.
-- **Contato**: botão de WhatsApp e formulário de interesse ou agendamento de visita. O formulário abre o WhatsApp com a mensagem pronta, sem servidor.
+| Página | Arquivo | Conteúdo |
+|---|---|---|
+| Início | `index.html` | Montagem 3D guiada pelo scroll, perguntas frequentes, contato e rodapé |
+| Vitrine | `vitrine.html` | Produtos com filtro por tipo (automáticos, sociais, cronógrafos) |
+| Edifice Preto | `edifice-preto.html` | Página do produto com destaques, preço sob consulta e ficha técnica |
+| Por dentro | `por-dentro.html` | Filme do mecanismo e como funciona um relógio automático |
+| A loja | `loja.html` | Visita com hora marcada e a seção interativa "Dê corda" |
+
+- **Montagem 3D**: caixa, mecanismo, engrenagens, mostrador, ponteiros, vidro de safira e pulseira. São 19 peças modeladas em código, que começam flutuando em pilha sobre a caixa e descem para o lugar.
+- **Cabeçalho**: botões em cápsula com um destaque que desliza até o botão sob o mouse e repousa na página atual. No celular vira um menu em tela cheia.
+- **Contato**: botão de WhatsApp e formulário de interesse ou agendamento de visita. O formulário abre o WhatsApp com a mensagem pronta, sem servidor. Os botões "Tenho interesse" e "Agendar visita" das outras páginas levam ao formulário já preenchido (`index.html?produto=...&motivo=visita#contato`).
 
 ## Como ver no seu computador
 
@@ -24,10 +31,14 @@ Abrindo o `index.html` direto, a página aparece inteira, mas com o herói parad
 ## Estrutura
 
 ```
-index.html   marcação da página
-style.css    todos os estilos
-script.js    comportamento da página e a cena 3D
-assets/      imagens, filme e texturas do relógio
+index.html           início: montagem 3D, perguntas e contato
+vitrine.html         produtos
+edifice-preto.html   página do produto
+por-dentro.html      o mecanismo
+loja.html            a loja e a visita
+style.css            todos os estilos, compartilhados pelas páginas
+script.js            comportamento das páginas e a cena 3D (só roda no início)
+assets/              imagens, filme e texturas do relógio
 ```
 
 Sem framework e sem etapa de build. As bibliotecas vêm de CDN:

@@ -57,9 +57,62 @@ function initPage() {
     document.body.classList.toggle('paused', document.hidden);
   });
 
+  initNavGlide();
+  initShop();
   initWind();
   initForm();
   initFilm();
+}
+
+/* Cabeçalho: destaque que desliza até o botão sob o mouse e repousa na página atual */
+function initNavGlide() {
+  const links = $('.nav__links');
+  if (!links) return;
+  const glide = document.createElement('span');
+  glide.className = 'nav__glide';
+  glide.setAttribute('aria-hidden', 'true');
+  links.prepend(glide);
+  const current = $('a[aria-current="page"]', links);
+  let shown;
+  const move = (a) => {
+    if (a === shown) return;
+    shown = a;
+    if (!a || !a.offsetWidth) { links.classList.remove('has-glide'); return; }
+    glide.style.width = a.offsetWidth + 'px';
+    glide.style.transform = 'translateX(' + a.offsetLeft + 'px)';
+    links.classList.add('has-glide');
+  };
+  $$('a', links).forEach((a) => {
+    a.addEventListener('pointerenter', () => move(a));
+    a.addEventListener('focus', () => move(a));
+  });
+  links.addEventListener('pointerleave', () => move(current));
+  links.addEventListener('focusout', (e) => { if (!links.contains(e.relatedTarget)) move(current); });
+  const place = () => { const a = shown; shown = undefined; move(a); };
+  addEventListener('resize', place);
+  if (document.fonts) document.fonts.ready.then(place);
+  move(current);
+  requestAnimationFrame(() => requestAnimationFrame(() => links.classList.add('is-ready')));
+}
+
+/* Vitrine: filtro por tipo de relógio */
+function initShop() {
+  const shop = $('.shop');
+  if (!shop) return;
+  const btns = $$('.filter__btn');
+  const items = $$('.product', shop);
+  const count = $('.shop__count');
+  btns.forEach((b) => b.addEventListener('click', () => {
+    const f = b.dataset.filter;
+    btns.forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+    let n = 0;
+    items.forEach((it) => {
+      const on = f === 'todos' || it.dataset.cat === f;
+      it.hidden = !on;
+      if (on) n++;
+    });
+    if (count) count.textContent = n + (n === 1 ? ' relógio' : ' relógios');
+  }));
 }
 
 /* Momento interativo: segure para dar corda */
@@ -123,6 +176,11 @@ function initForm() {
   const dataRow = $('.form__row--data', form);
   const syncData = () => dataRow.classList.toggle('is-on', motivo.value === 'visita');
   motivo.addEventListener('change', syncData);
+
+  // vindo de outra página: ?produto=...&motivo=visita
+  const q = new URLSearchParams(location.search);
+  if (q.get('produto')) $('#f-produto', form).value = q.get('produto').slice(0, 80);
+  if (['interesse', 'visita', 'duvida'].includes(q.get('motivo'))) motivo.value = q.get('motivo');
   syncData();
 
   $$('[data-produto]').forEach((b) => b.addEventListener('click', () => {
@@ -172,13 +230,13 @@ function initFilm() {
 }
 
 /* ---------- 3. Legendas da montagem ---------- */
-const hero = $('#montagem');
-const bands = $$('.band', hero).map((el, i, all) => ({
+const hero = $('#montagem');            // só existe na página inicial
+const bands = hero ? $$('.band', hero).map((el, i, all) => ({
   el, a: +el.dataset.a, b: +el.dataset.b,
   first: i === 0, last: i === all.length - 1, op: -1, k: -1,
-}));
-const railItems = $$('.rail li', hero);
-const railFill = $('.rail__fill', hero);
+})) : [];
+const railItems = hero ? $$('.rail li', hero) : [];
+const railFill = hero ? $('.rail__fill', hero) : null;
 const STEP_AT = [0.08, 0.215, 0.345, 0.54, 0.68, 0.775, 0.87];
 let loadK = 0, railStep = -1, railP = -1;
 
@@ -937,9 +995,9 @@ async function initWatch() {
 }
 
 /* ---------- Partida ---------- */
-splitWords();
+if (hero) splitWords();
 initPage();
-initWatch().catch((err) => {
+if (hero) initWatch().catch((err) => {
   console.warn('Montagem 3D indisponível, usando a imagem fixa:', err.message);
   hero.classList.remove('boot', 'gl', 'still');
   hero.classList.add('static');

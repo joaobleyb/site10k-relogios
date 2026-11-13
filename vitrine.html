@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vitrine · Clock</title>
+  <meta name="description" content="A vitrine da Clock: o Casio Edifice Preto em destaque e uma seleção curta de relógios automáticos, sociais e cronógrafos.">
+  <meta name="theme-color" content="#0b0a09">
+  <!-- DEPLOY STEP: trocar pelas URLs absolutas do site no ar -->
+  <meta property="og:title" content="Vitrine · Clock">
+  <meta property="og:image" content="assets/hero.jpg">
+  <meta property="og:url" content="">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230b0a09'/%3E%3Ccircle cx='16' cy='16' r='10' fill='none' stroke='%23d39a78' stroke-width='2'/%3E%3Cpath d='M16 9v7l5 3' fill='none' stroke='%23d39a78' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400&family=Manrope:wght@400;600&family=Unbounded:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
+  <div class="env" aria-hidden="true"></div>
+
+  <nav class="nav" aria-label="Principal">
+    <a class="nav__brand" href="index.html" aria-label="Clock, início">CLOCK</a>
+    <button class="nav__toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir menu"><span></span><span></span></button>
+    <div class="nav__links" id="nav-links">
+      <a href="vitrine.html" aria-current="page">Vitrine</a>
+      <a href="edifice-preto.html">Edifice Preto</a>
+      <a href="por-dentro.html">Por dentro</a>
+      <a href="loja.html">A loja</a>
+      <a href="index.html#contato">Contato</a>
+    </div>
+    <a class="btn btn--ghost nav__cta" data-wa="Olá, Clock! Vi a vitrine e quero saber mais sobre os relógios." href="index.html#contato"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12a8 8 0 1 1 3.3 6.5L4 19.5l1.1-3.6A8 8 0 0 1 4 12Z"/></svg>WhatsApp</a>
+  </nav>
+
+  <main id="main" tabindex="-1">
+    <header class="page-head page-head--vitrine">
+      <div class="page-head__bg" aria-hidden="true"></div>
+      <div class="page-head__text reveal">
+        <p class="crumbs"><a href="index.html">Início</a><span aria-hidden="true">/</span>Vitrine</p>
+        <p class="kicker">A vitrine</p>
+        <h1>Escolha o seu.</h1>
+        <p class="lede">Uma seleção curta, olhada peça por peça. Gostou de algum? A gente mostra de perto.</p>
+      </div>
+    </header>
+
+    <section class="sec shop-sec" aria-label="Relógios da vitrine">
+      <div class="shop__bar reveal">
+        <div class="filter" role="group" aria-label="Filtrar por tipo">
+          <button class="filter__btn" type="button" data-filter="todos" aria-pressed="true">Todos</button>
+          <button class="filter__btn" type="button" data-filter="automatico" aria-pressed="false">Automáticos</button>
+          <button class="filter__btn" type="button" data-filter="social" aria-pressed="false">Sociais</button>
+          <button class="filter__btn" type="button" data-filter="cronografo" aria-pressed="false">Cronógrafos</button>
+        </div>
+        <p class="shop__count" aria-live="polite">4 relógios</p>
+      </div>
+
+      <div class="shop">
+        <article class="product product--feature reveal" data-cat="automatico">
+          <a class="product__img" href="edifice-preto.html" tabindex="-1" aria-hidden="true">
+            <img src="assets/stone.jpg" alt="" width="1400" height="1750">
+          </a>
+          <div class="product__body">
+            <p class="tag">Em destaque · Automático</p>
+            <h2 class="product__name"><a href="edifice-preto.html">Casio Edifice Preto</a></h2>
+            <p>Caixa em carbono forjado, mostrador que nunca se repete e detalhes em ouro rosé. O relógio da montagem da página inicial.</p>
+            <div class="product__foot">
+              <span class="price">Preço sob consulta</span>
+              <a class="btn" href="edifice-preto.html">Ver detalhes</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-cat="automatico">
+          <div class="product__img"><img src="assets/p-azul.jpg" alt="Relógio automático de aço com mostrador azul" loading="lazy" width="900" height="1125"></div>
+          <div class="product__body">
+            <p class="tag">Automático</p>
+            <h2 class="product__name">Aço Azul</h2>
+            <p>Mostrador azul profundo e pulseira de aço.</p>
+            <div class="product__foot">
+              <span class="price">Sob consulta</span>
+              <a class="link" href="index.html?produto=A%C3%A7o+Azul#contato">Tenho interesse</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-cat="social">
+          <div class="product__img"><img src="assets/p-rose.jpg" alt="Relógio social fino em ouro rosé com pulseira de couro" loading="lazy" width="900" height="1125"></div>
+          <div class="product__body">
+            <p class="tag">Social</p>
+            <h2 class="product__name">Rosé Clássico</h2>
+            <p>Fino, discreto, com pulseira de couro.</p>
+            <div class="product__foot">
+              <span class="price">Sob consulta</span>
+              <a class="link" href="index.html?produto=Ros%C3%A9+Cl%C3%A1ssico#contato">Tenho interesse</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="product reveal" data-cat="cronografo">
+          <div class="product__img"><img src="assets/p-crono.jpg" alt="Cronógrafo esportivo de aço com mostrador preto" loading="lazy" width="900" height="1125"></div>
+          <div class="product__body">
+            <p class="tag">Cronógrafo</p>
+            <h2 class="product__name">Crono Sport</h2>
+            <p>Três contadores e pulseira de borracha.</p>
+            <div class="product__foot">
+              <span class="price">Sob consulta</span>
+              <a class="link" href="index.html?produto=Crono+Sport#contato">Tenho interesse</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="sec cta-band reveal">
+      <p class="kicker">Não achou o seu?</p>
+      <h2>Fale com a gente.</h2>
+      <p class="lede">Conte o modelo ou o estilo que procura. A loja responde pelo WhatsApp.</p>
+      <div class="cta-band__row">
+        <a class="btn" data-wa="Olá, Clock! Estou procurando um relógio e queria ajuda." href="index.html#contato">Chamar no WhatsApp</a>
+        <a class="btn btn--ghost" href="index.html#contato">Enviar mensagem</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__top">
+      <p class="footer__brand">CLOCK</p>
+      <nav class="footer__nav" aria-label="Rodapé">
+        <a href="vitrine.html">Vitrine</a>
+        <a href="edifice-preto.html">Edifice Preto</a>
+        <a href="por-dentro.html">Por dentro</a>
+        <a href="loja.html">A loja</a>
+        <a href="index.html#contato">Contato</a>
+      </nav>
+    </div>
+    <p>Vitrine de relógios. Atendimento pelo WhatsApp e com hora marcada.</p>
+    <p class="footer__fine">Casio e Edifice são marcas registradas da Casio Computer Co., Ltd. As imagens deste site são ilustrativas e foram criadas com inteligência artificial.</p>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
